@@ -1,5 +1,4 @@
-import React from "react";
-
+import React, { FC } from "react";
 import { Cell } from "../models/Cell";
 
 interface CellProps {
@@ -8,7 +7,7 @@ interface CellProps {
   click: (cell: Cell) => void;
 }
 
-const CellComponent: React.FC<CellProps> = ({ cell, selected, click }) => {
+const CellComponent: FC<CellProps> = ({ cell, selected, click }) => {
   return (
     <div
       className={["cell", cell.color, selected ? "selected" : ""].join(" ")}
